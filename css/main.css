@@ -36,7 +36,7 @@ html, body {
     stroke-linejoin:miter;
 /*    stroke-width:4px;*/
     stroke-dasharray:1500 1500;
-    animation: animate 3.6s ease-in-out;
+    animation: animate 4s ease-in-out;
 }
 
 #rightTriangle {
@@ -46,7 +46,7 @@ html, body {
     stroke-miterlimit:10;
 /*    stroke-width:4px; */
     stroke-dasharray:1500 1500;
-    animation: animate 3.6s ease-in-out;
+    animation: animate 4s ease-in-out;
 }
 
 @keyframes animate {
