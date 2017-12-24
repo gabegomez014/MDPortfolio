@@ -1,35 +1,18 @@
 html, body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     padding: 0;
     margin: 0;
+    position: fixed
 }
 
-#page-wrapper, #background-wrapper {
-    height: inherit;
-    width: inherit
-}
-
-
-#background-base{
-    background: url(../assets/BACKGROUND%20BASE.svg);
-    background-size: cover;
+#page-wrapper {
     height: inherit;
     width: inherit;
-    text-align: center
-}
-
-#background-overlay {
-    background: url(../assets/BACKGROUND%201.svg);
-    background-size: cover;
-    height: inherit;
-    width: inherit;
-    text-align: center;
-    align-content: center
 }
 
 /* Martin's logo */
-#leftTriangle {
+.leftTriangle {
     fill:none;
     stroke:white;
     stroke-miterlimit:10;
@@ -39,7 +22,9 @@ html, body {
     animation: animate 3.5s ease-in-out;
 }
 
-#rightTriangle {
+.rightTriangle {
+    height: 100%;
+    width: 100%;
     fill:none;
     stroke:white;
     stroke-linejoin:miter;
@@ -59,23 +44,72 @@ html, body {
     stroke:white;
     stroke-miterlimit:10;
     stroke-width:0.25px;
-    opacity: 0;     
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
-    
+    opacity: 1;     
+    animation:  nameAnimate 3.5s ease-in-out;
 }
 
-#logo:hover #name{
-    opacity: 1
+@keyframes nameAnimate{
+    from {opacity: 0}
+    to {opacity: 1}
 }
-
 
 svg {
-    position: relative;
-    height: 50%;
-    top: 25%
+    height: 100%;
+    width: 100%;
 }
 
-#panel1 {
-    background: url("../assets/PANELS/ABOUT%20PANEL.svg");
+.aboutTxt {
+    fill-opacity: 0
 }
+
+.collectionsTxt {
+    fill-opacity: 0
+}
+
+.logofolioTxt {
+    fill-opacity: 0
+}
+
+.extraTxt {
+    fill-opacity: 0
+}
+
+#aboutPanel {
+    transition: fill-opacity 0.5s;
+}
+
+#collectionsPanel {
+    transition: fill-opacity 0.5s;
+}
+
+#logofolioPanel {
+    transition: fill-opacity 0.5s;
+}
+
+#extraPanel {
+    transition: fill-opacity 0.5s;
+}
+
+#secretPanel {
+    transition: fill-opacity 0.5s;
+}
+
+#aboutPanel:hover {
+    fill-opacity: 0.1
+}
+
+#collectionsPanel:hover {
+    fill-opacity: 0.1
+}
+
+#extraPanel:hover {
+    fill-opacity: 0.1
+}
+
+#logofolioPanel:hover {
+    fill-opacity: 0.1
+}
+
+#secretPanel:hover {
+    fill-opacity: 0.5
+} 
